@@ -58,6 +58,9 @@ contactForm.addEventListener("submit", (e) => {
     contactForm.submit(); // 🔥 Envia o formulário para o FormSubmit
     submitButton.textContent = "Enviar";
     submitButton.style.backgroundColor = "#6F4E37";
+    
+    // Redirecionar para a home após envio
+    window.location.href = "/";
   }, 1000);
 });
 
