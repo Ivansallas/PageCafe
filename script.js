@@ -61,7 +61,6 @@ contactForm.addEventListener("submit", (e) => {
   }, 1000);
 });
 
-
 // Smooth scroll para links de navegação
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
