@@ -60,7 +60,7 @@ contactForm.addEventListener("submit", (e) => {
     submitButton.style.backgroundColor = "#6F4E37";
     
     // Redirecionar para a home após envio
-    window.location.href = "https://ivansallas.github.io/PageCafe/";
+    window.location.href = "#home";
   }, 1000);
 });
 
