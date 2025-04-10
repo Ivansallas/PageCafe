@@ -43,19 +43,24 @@ if (addToCartButtons.length > 0) {
 }
 
 contactForm.addEventListener("submit", (e) => {
-  // FormSubmit já envia normalmente, então este `preventDefault()` pode ser removido
-  // MAS, se quiser mostrar um feedback visual antes do envio, mantenha assim:
   e.preventDefault();
 
-  const submitButton = contactForm.querySelector('button[type="submit"]');
-  submitButton.textContent = "Enviando...";
-  submitButton.disabled = true;
+  const formData = new FormData(contactForm);
+  const formObject = Object.fromEntries(formData);
 
-  // Deixe o navegador enviar normalmente
+  console.log("Dados do formulário:", formObject);
+
+  const submitButton = contactForm.querySelector('button[type="submit"]');
+  submitButton.textContent = "Mensagem Enviada!";
+  submitButton.style.backgroundColor = "#4CAF50";
+
   setTimeout(() => {
-    contactForm.submit(); // Envia o formulário após feedback
+    contactForm.submit(); // 🔥 Envia o formulário para o FormSubmit
+    submitButton.textContent = "Enviar";
+    submitButton.style.backgroundColor = "#6F4E37";
   }, 1000);
 });
+
 
 // Smooth scroll para links de navegação
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
