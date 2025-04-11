@@ -295,4 +295,52 @@ footer {
     .product-grid {
         grid-template-columns: 1fr;
     }
-} 
+}
+
+/* Estilo do botão do WhatsApp */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.whatsapp-button i {
+  font-size: 30px;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+  background-color: #128C7E;
+}
+.whatsapp-text{
+    visibility: hidden; 
+    position: absolute;
+    width: 120px;
+    top: -10px;
+    left: -135px;
+    padding: 4px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #128C7E;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+
+}
+.whatsapp-button:hover .whatsapp-text{
+    visibility: visible;
+    opacity: 1;
+}
